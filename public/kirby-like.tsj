@@ -1,0 +1,14 @@
+{ "columns":9,
+ "image":"..\/..\/..\/..\/Downloads\/images\/kirby-like.png",
+ "imageheight":160,
+ "imagewidth":144,
+ "margin":0,
+ "name":"kirby-like",
+ "spacing":0,
+ "tilecount":90,
+ "tiledversion":"git",
+ "tileheight":16,
+ "tilewidth":16,
+ "type":"tileset",
+ "version":"1.10"
+}
