@@ -1,9 +1,9 @@
 import {k} from './kaboomCtx.ts';
 import {makeMap} from "./utils.ts";
-import {makePlayer} from "./entities.ts";
+import {makePlayer, setControls} from "./entities.ts";
 
 async function gameSetup() {
-    k.loadSprite("assets", './kirby-like.png', {
+    k.loadSprite("assets", "./kirby-like.png", {
         sliceX: 9,
         sliceY: 10,
         anims: {
@@ -13,10 +13,10 @@ async function gameSetup() {
             kirbInhaleEffect: {from: 3, to: 8, speed: 15, loop: true},
             shootingStar: 9,
             flame: {from: 36, to: 37, speed: 4, loop: true},
-            guyIdle: 28,
+            guyIdle: 18,
             guyWalk: {from: 18, to: 19, speed: 4, loop: true},
             bird: {from: 27, to: 28, speed: 4, loop: true},
-        }
+        },
     });
 
     k.loadSprite("level-1", "./level-1.png");
@@ -41,6 +41,8 @@ async function gameSetup() {
             level1SpawnPoints.player[0].x,
             level1SpawnPoints.player[0].y
         );
+
+        setControls(k, kirb);
 
         k.add(kirb);
         k.camScale(0.7, 0.7);
